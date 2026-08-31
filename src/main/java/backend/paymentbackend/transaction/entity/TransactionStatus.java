@@ -1,4 +1,7 @@
 package backend.paymentbackend.transaction.entity;
 
-public class TransactionStatus {
+public enum TransactionStatus {
+    INITIATED,
+    SUCCESS,
+    FAILED
 }

@@ -1,4 +1,8 @@
 package backend.paymentbackend.transaction.entity;
 
-public class TransactionType {
+public enum TransactionType {
+
+    PAYMENT,
+    REFUND,
+    REVERSAL
 }
