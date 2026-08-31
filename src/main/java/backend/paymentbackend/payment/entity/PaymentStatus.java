@@ -1,4 +1,24 @@
 package backend.paymentbackend.payment.entity;
 
-public class PaymentStatus {
+public enum PaymentStatus {
+
+    CREATED,
+
+    PENDING,
+
+    PROCESSING,
+
+    SUCCESS,
+
+    FAILED,
+
+    CANCELLED,
+
+    REFUND_REQUESTED,
+
+    REFUND_PROCESSING,
+
+    PARTIALLY_REFUNDED,
+
+    REFUNDED
 }
