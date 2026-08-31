@@ -1,4 +1,7 @@
 package backend.paymentbackend.merchant.entity;
 
-public class MerchantStatus {
+public enum MerchantStatus {
+    ACTIVE,
+    INACTIVE,
+    SUSPENDED
 }
