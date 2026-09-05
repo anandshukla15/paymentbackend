@@ -1,6 +1,7 @@
 package backend.paymentbackend.payment.entity;
 
 import backend.paymentbackend.merchant.entity.Merchant;
+import backend.paymentbackend.refund.entity.Refund;
 import backend.paymentbackend.transaction.entity.PaymentTransaction;
 import backend.paymentbackend.user.entity.User;
 import jakarta.persistence.*;
@@ -87,6 +88,14 @@ public class Payment {
     )
     @Builder.Default
     private List<PaymentTransaction> transactions = new ArrayList<>();
+
+    @OneToMany(
+            mappedBy = "payment",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @Builder.Default
+    private List<Refund> refunds = new ArrayList<>();
 
     @PrePersist
     protected void onCreate() {
